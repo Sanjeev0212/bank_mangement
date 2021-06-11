@@ -1,5 +1,5 @@
-import mysql.connector
-mydb=mysql.connector.connect(host='localhost',user='root',password='sanju123',database='BANK_MANGEMENT')
+import mysql.connector as connector
+mydb=connector.connect(host='localhost',user='root',password='Damini02@',database='bank_management')
 def OpenAcc():
     n=input("Enter The Name: ")
     ac=input("Enter The Account No: ")
@@ -9,7 +9,7 @@ def OpenAcc():
     ob=int(input("Enter The Opening Balance: "))
     data1=(n,ac,db,add,cn,ob)
     data2=(n,ac,ob)
-    sql1=('insert into account values(%s,%s,%s,%s,%s.%s)')
+    sql1=('insert into account values(%s,%s,%s,%s,%s,%s)')
     sql2=('instert into amount values(%s,%s,%s)')
     x=mydb.cursor()
     x.execute(sql1,data1)
