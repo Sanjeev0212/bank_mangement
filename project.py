@@ -10,7 +10,7 @@ def OpenAcc():
     data1=(n,ac,db,add,cn,ob)
     data2=(n,ac,ob)
     sql1=('insert into account values(%s,%s,%s,%s,%s,%s)')
-    sql2=('instert into amount values(%s,%s,%s)')
+    sql2=('insert into amount values(%s,%s,%s)')
     x=mydb.cursor()
     x.execute(sql1,data1)
     x.execute(sql2,data2)
