@@ -26,7 +26,7 @@ def DepoAmo():
     x.execute(a,data)
     result=x.fetchone()
     t=result[0]+amount
-    sql=('update amount set balance where AccNo=%s')
+    sql=('update amount set balance=%s where AccNo=%s')
     d=(t,ac)
     x.execute(sql,d)
     mydb.commit() #save the changes
@@ -40,7 +40,7 @@ def WithdrawAmount():
     x.execute(a,data)
     result=x.fetchone()
     t=result[0]-amount
-    sql=('update amount set balance where AccNo=%s')
+    sql=('update amount set balance=%s where AccNo=%s')
     d=(t,ac)
     x.execute(sql,d)
     mydb.commit() #save the changes
