@@ -1,14 +1,14 @@
 import mysql.connector
 mydb=mysql.connector.connect(host="localhost",port="3306", user="root", password="sanju123", database="bank_mangement")
 def openAcc():
-    m=n=input("Enter The Name: ")
-    a=ac=input("Enter The Account No: ")
+    n=input("Enter The Name: ")
+    ac=input("Enter The Account No: ")
     db=input("Enter The Date Of Birth: ")
     add=input("Enter The Address: ")
     cn=input("Enter The Contact Number: ")
     b=ob=int(input("Enter The Opening Balance: "))
     data1=(n,ac,db,add,cn,ob)
-    data2=(m,a,b)
+    data2=(n,ac,b)
     sql1="insert into account values(%s,%s,%s,%s,%s,%s)"
     sql2="insert into amount values(%s,%s,%s)"
     x=mydb.cursor()
